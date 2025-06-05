@@ -1,162 +1,204 @@
 # How to Use This Course
 
-Welcome to your interactive sensor fusion learning journey! This guide will help you make the most of the course's interactive features and learning tools.
+Welcome to your interactive sensor fusion learning journey! This course offers two complementary learning paths: **hands-on Jupyter notebooks** for interactive coding and **comprehensive documentation** for reference and theory.
 
-## 🎮 Interactive Features Overview
+## 🎮 Two Ways to Learn
 
-This course is designed to be **hands-on and interactive**. Unlike traditional textbooks or videos, you'll be actively coding, experimenting, and building throughout your learning experience.
+### 🚀 Option 1: Interactive Notebooks (Recommended)
+**Best for:** Hands-on learners who want to code along and experiment
 
-### ✨ Key Features
-- 📓 **Live Jupyter Notebooks** — Execute Python code directly in your browser
-- 📊 **Progress Tracking** — See your learning journey visualized in real-time
-- 🧩 **Interactive Quizzes** — Test your understanding with immediate feedback
-- 🎯 **Guided Exercises** — Step-by-step coding challenges with hints
-- 📱 **Mobile-Friendly** — Learn on any device, anywhere
+**Location:** `notebooks/` directory  
+**Format:** Jupyter `.ipynb` files with executable code cells
+
+```bash
+# Start your interactive learning journey
+jupyter lab
+# Navigate to: notebooks/lidar/01_introduction_to_lidar.ipynb
+```
+
+### 📚 Option 2: Documentation
+**Best for:** Reading theory, quick reference, and building the full course website
+
+**Location:** `content/` directory  
+**Format:** Markdown files that build into a beautiful website
+
+```bash
+# Build the documentation website
+jupyter-book build content/
+# Open: _build/html/index.html
+```
+
+## 🎯 Quick Start Guide
+
+### 1. Set Up Your Environment
+
+```bash
+# Install all required packages
+pip install -r requirements.txt
+
+# Verify Jupyter Lab installation
+jupyter lab --version
+
+# Generate any missing notebooks (if needed)
+python3 generate_notebooks.py
+```
+
+### 2. Choose Your Learning Path
+
+**For Interactive Learning:**
+```bash
+# Launch Jupyter Lab
+jupyter lab
+
+# You'll see:
+# 📁 notebooks/
+#   └── 📁 lidar/
+#       └── 📓 01_introduction_to_lidar.ipynb  ← Start here!
+```
+
+**For Documentation Reading:**
+- Read this documentation online or build locally
+- Use as reference while working through notebooks
+- Perfect for reviewing concepts
 
 ## 📓 Working with Interactive Notebooks
 
 ### Executing Code Cells
 
-Throughout the course, you'll see code blocks that you can run and modify:
+Throughout the course, you'll see executable code blocks:
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 
-# This is an interactive code cell!
-# Click the "Run" button or press Shift+Enter to execute
+# This code runs in the notebook!
 data = np.random.randn(100)
 plt.hist(data, bins=20)
 plt.title("Interactive Histogram")
 plt.show()
 ```
 
-```{admonition} 💡 Pro Tips for Code Cells
-:class: tip
+### � Keyboard Shortcuts
 - **Shift + Enter** — Run current cell and move to next
 - **Ctrl + Enter** — Run current cell and stay in place
 - **Alt + Enter** — Run current cell and insert new cell below
 - **Tab** — Auto-complete code suggestions
 - **Shift + Tab** — View function documentation
-```
 
 ### Modifying and Experimenting
 
-Feel free to modify any code! The best way to learn is by experimenting:
+The notebooks are designed for experimentation! Try changing parameters:
 
 ```python
-# Try changing these parameters and see what happens!
+# 🚀 Experiment with these values!
 num_points = 1000  # Change this number
 noise_level = 0.1  # Try different values
+sensor_height = 1.8  # Modify and see what happens
 
-# Your modifications won't break anything - experiment freely!
+# Your modifications won't break anything - explore freely!
 ```
 
-### Saving Your Work
+## 💾 Saving Your Work
 
-Your code modifications and progress are automatically saved in your browser's local storage. However, for important work:
+### Automatic Saving
+- **Notebooks:** Auto-save every 2 minutes in Jupyter Lab
+- **Manual Save:** `Ctrl+S` or File → Save Notebook
+
+### Best Practices
+```bash
+# Keep your own copy of modified notebooks
+cp notebooks/lidar/01_introduction_to_lidar.ipynb my_notebooks/
+
+# Or create a Git branch for your experiments
+git checkout -b my-experiments
+```
 
 ```{admonition} 💾 Backup Recommendation
 :class: warning
-While your progress is saved locally, consider copying important code to your own Git repository or notebooks for backup purposes.
+While your progress is saved locally, consider backing up important work to your own Git repository or cloud storage.
 ```
 
-## 📊 Progress Tracking System
+## 🧩 Interactive Features
 
-### Visual Progress Tracker
+### Quizzes and Exercises
 
-Look for the **progress tracker** on the right side of your screen (desktop) or accessible via the hamburger menu (mobile):
+Notebooks include interactive elements:
 
-- 📚 **Course Progress** — See completion percentage for each course
-- ✅ **Completed Lessons** — Green checkmarks for finished content
-- 📖 **Current Lesson** — Highlighted in blue
-- 🏆 **Quiz Scores** — Track your quiz performance
-
-### How Progress is Tracked
-
-1. **Page Visits** — Automatically tracked when you visit a lesson
-2. **Quiz Completion** — Recorded when you answer correctly
-3. **Exercise Completion** — Manual check-off for coding exercises
-4. **Local Storage** — All progress saved in your browser
-
-### Progress Controls
-
-Use these keyboard shortcuts for quick access:
-- **Ctrl/Cmd + /** — Toggle progress tracker visibility
-- **Ctrl/Cmd + Shift + R** — View detailed progress (developer mode)
-
-## 🧩 Interactive Quiz System
-
-### Taking Quizzes
-
-Quizzes appear throughout lessons to reinforce key concepts:
-
-<div class="quiz-container" data-quiz-id="sample-quiz" data-correct="b">
-  <div class="quiz-question">
-    🤔 <strong>Sample Question:</strong> What is the primary advantage of sensor fusion in autonomous vehicles?
-  </div>
-  <ul class="quiz-options">
-    <li data-value="a">Reduced computational requirements</li>
-    <li data-value="b">Improved robustness and accuracy</li>
-    <li data-value="c">Lower hardware costs</li>
-    <li data-value="d">Simplified algorithms</li>
-  </ul>
-</div>
-
-### Quiz Features
-
-- **Immediate Feedback** — See results instantly upon selection
-- **Multiple Attempts** — Learn from mistakes without penalty
-- **Progress Tracking** — Completed quizzes marked in your progress
-- **Explanations** — Detailed feedback for both correct and incorrect answers
-
-## 🎯 Guided Exercises
-
-### Exercise Structure
-
-Each lesson includes hands-on exercises structured as:
-
-<div class="exercise-notebook">
-  <div class="exercise-title">🛠️ Exercise: RANSAC Implementation</div>
-  <p><strong>Goal:</strong> Implement the RANSAC algorithm for plane fitting in 3D point clouds.</p>
-  
-  <p><strong>Tasks:</strong></p>
-  <ol>
-    <li>Load sample point cloud data</li>
-    <li>Implement random sample selection</li>
-    <li>Calculate model parameters</li>
-    <li>Count inliers and evaluate fit</li>
-    <li>Visualize results</li>
-  </ol>
-  
-  <p><strong>Success Criteria:</strong> Your implementation should correctly identify the ground plane with >95% accuracy.</p>
-</div>
-
-### Exercise Tips
-
-```{admonition} 🚀 Exercise Success Tips
-:class: tip
-1. **Read Carefully** — Understand the goal before coding
-2. **Start Simple** — Get basic functionality working first
-3. **Test Incrementally** — Verify each step before moving on
-4. **Use Print Statements** — Debug by examining intermediate results
-5. **Ask for Help** — Use the community forum for challenging problems
+**Knowledge Check Questions:**
+```python
+# Interactive quiz function (run the cell to start)
+def quiz_question(question, options, correct_idx):
+    # Built-in quiz system with immediate feedback
+    pass
 ```
 
-### Marking Exercises Complete
-
-When you finish an exercise, mark it complete to track progress:
-
-```javascript
-// Mark exercise as complete (built into each exercise page)
-sensorFusionUtils.markExerciseComplete('ransac-implementation');
+**Hands-On Exercises:**
+```python
+# 🚀 YOUR TURN: Complete this function
+def analyze_point_cloud(points):
+    """
+    TODO: Implement point cloud analysis
+    
+    Your task:
+    1. Calculate bounding box
+    2. Find center point
+    3. Compute statistics
+    """
+    # Write your code here!
+    pass
 ```
 
-## 🔧 Code Environment Setup
+### Interactive Visualizations
 
-### Required Libraries
+Experience rich 3D visualizations:
 
-All necessary libraries are pre-installed in the interactive environment:
+```python
+# Interactive 3D plots with Plotly
+import plotly.graph_objects as go
+
+fig = go.Figure(data=go.Scatter3d(...))
+fig.show()  # Rotate, zoom, hover for details!
+```
+
+**Features:**
+- **🔄 Rotate:** Click and drag to change viewpoint
+- **🔍 Zoom:** Scroll wheel or pinch to zoom
+- **📍 Hover:** Mouse over points for detailed information
+- **📷 Export:** Save plots as images or HTML files
+
+## 📊 Progress Tracking
+
+### Notebook Progress
+Your progress is automatically tracked:
+- ✅ Completed cells are marked with output
+- 🏃‍♂️ Current position is highlighted
+- 💾 All changes are auto-saved
+
+### Course Progress
+- Complete notebooks in sequence for best learning
+- Each notebook builds on previous concepts
+- Exercise solutions build practical skills
+
+## 🎯 Course Structure
+
+### 🔍 Course 1: Lidar (Available Now)
+**Interactive Notebooks:**
+- `01_introduction_to_lidar.ipynb` — Sensor principles ✅
+- `02_parsing_pcd_ply_files.ipynb` — File I/O *(Coming soon)*
+- `03_ransac_plane_fitting.ipynb` — Ground detection *(Coming soon)*
+- `04_euclidean_clustering.ipynb` — Object clustering *(Coming soon)*
+- `05_bounding_boxes.ipynb` — Object localization *(Coming soon)*
+- `06_lidar_visualizer.ipynb` — 3D visualization *(Coming soon)*
+- `07_lidar_summary.ipynb` — Complete pipeline *(Coming soon)*
+
+### 📷 Course 2-4: Camera, Radar, Kalman Filters
+*(Coming in future updates)*
+
+## 🔧 Code Environment
+
+### Pre-installed Libraries
+
+All notebooks come with these libraries ready to use:
 
 ```python
 # Core scientific computing
@@ -170,7 +212,7 @@ import open3d as o3d
 from skimage import feature, measure
 
 # Sensor fusion specific
-from filterpy.kalman import KalmanFilter, ExtendedKalmanFilter
+from filterpy.kalman import KalmanFilter
 from filterpy.common import Q_discrete_white_noise
 
 # Interactive visualization
@@ -180,96 +222,109 @@ import plotly.graph_objects as go
 
 ### Local Development (Optional)
 
-To run exercises locally on your machine:
+To run on your own machine:
 
 ```bash
-# Clone the course repository
-git clone https://github.com/yourusername/sensor-fusion-course.git
-cd sensor-fusion-course
-
-# Install dependencies
+# 1. Install Python 3.8+
+# 2. Clone/download the course
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# Launch Jupyter
+# 4. Launch Jupyter Lab
 jupyter lab
+
+# 5. Open notebooks/lidar/01_introduction_to_lidar.ipynb
 ```
+
+## � Troubleshooting
+
+### Common Issues
+
+**"Kernel not found" error:**
+```bash
+# Reinstall Jupyter kernels
+python -m ipykernel install --user --name=python3
+```
+
+**Plots not showing:**
+```bash
+# Install visualization extensions
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+jupyter labextension install plotlywidget
+```
+
+**Module import errors:**
+```bash
+# Verify all packages are installed
+pip install -r requirements.txt
+
+# Check your Python environment
+which python
+python --version
+```
+
+### Performance Tips
+
+**For large datasets:**
+- Work with sample data first
+- Use numpy vectorization 
+- Close unused notebooks to free memory
+
+**For smooth 3D visualizations:**
+- Reduce point cloud density for exploration
+- Use simplified visualization modes
+- Consider your system's graphics capabilities
 
 ## 📱 Mobile Learning
 
-### Responsive Design
+### Responsive Experience
+- Notebooks work on tablets and phones
+- Touch-friendly interface elements
+- Optimized for smaller screens
 
-The course is optimized for mobile devices:
+### Limitations
+- Complex 3D visualizations work best on desktop
+- Code editing easier with physical keyboard
+- Large datasets require more powerful devices
 
-- **Touch-Friendly** — Large buttons and touch targets
-- **Readable Text** — Optimized font sizes and spacing
-- **Collapsible Sections** — Hide/show content as needed
-- **Offline Capable** — Core content works without internet
+## 🎓 Learning Tips
 
-### Mobile-Specific Features
+### For Maximum Success
 
-- **Swipe Navigation** — Swipe between lessons on touch devices
-- **Zoom Support** — Pinch to zoom on diagrams and equations
-- **Portrait Mode** — Optimized layout for phone screens
-
-## 🎨 Customization Options
-
-### Theme Selection
-
-Choose your preferred visual theme:
-
-- **🌞 Light Mode** — Clean, bright interface for day learning
-- **🌙 Dark Mode** — Easy on eyes for evening study sessions
-- **⚡ Auto** — Switches based on system preferences
-
-Access theme controls via the toolbar or use system settings.
-
-### Accessibility Features
-
-- **High Contrast** — Enhanced visibility for all users
-- **Large Text** — Adjustable font sizes
-- **Keyboard Navigation** — Full course navigation without mouse
-- **Screen Reader** — Compatible with assistive technologies
-
-## 📞 Getting Help
-
-### Community Support
-
-- **💬 Discussion Forum** — Ask questions and help peers
-- **🤝 Study Groups** — Form groups with other learners
-- **👨‍🏫 Office Hours** — Live Q&A sessions with instructors
-
-### Technical Issues
-
-If you encounter technical problems:
-
-1. **Refresh** — Try reloading the page
-2. **Clear Cache** — Clear browser cache and cookies
-3. **Different Browser** — Test in Chrome, Firefox, or Safari
-4. **Report Bug** — Use the feedback form for persistent issues
-
-### Progress Reset
-
-If you need to reset your progress:
-
-```javascript
-// Reset all progress (cannot be undone!)
-sensorFusionUtils.resetProgress();
+```{admonition} 🚀 Pro Learning Tips
+:class: tip
+1. **Code Along** — Don't just read, run every code cell
+2. **Experiment** — Modify parameters and see what happens
+3. **Take Notes** — Use markdown cells to add your insights
+4. **Practice** — Complete all exercises and challenges
+5. **Connect** — Join the community for discussions and help
 ```
 
-```{admonition} ⚠️ Progress Reset Warning
-:class: warning
-Resetting progress will permanently delete all tracked completion data. This action cannot be undone.
-```
+### Study Schedule Suggestion
+- **Week 1-2:** Lidar fundamentals (notebooks 1-3)
+- **Week 3-4:** Advanced lidar processing (notebooks 4-7)
+- **Week 5+:** Move to camera and radar courses
+
+### Getting Unstuck
+1. **Re-read** the cell above your current position
+2. **Check docs** — Use `help()` function or `shift+tab`
+3. **Search online** — Most concepts have excellent tutorials
+4. **Ask for help** — Use the community forum
+5. **Take a break** — Sometimes stepping away helps!
 
 ---
 
 ## 🚀 Ready to Begin?
 
-Now that you understand the interactive features, you're ready to dive into the content!
+**Start your interactive learning journey:**
 
-**Next Steps:**
-1. Check out the [Resources](resources.md) for helpful reference materials
-2. Start with [Course 1: Lidar](lidar/index.md) to begin your sensor fusion journey
-3. Join the community forum to connect with other learners
+```bash
+jupyter lab
+# Open: notebooks/lidar/01_introduction_to_lidar.ipynb
+```
 
-*Happy learning! 🎓*
+**Or browse the documentation:**
+- Continue reading: [Resources & References](resources.md)
+- Jump to content: [Course 1: Lidar](lidar/index.md)
+
+*Let's build the future of autonomous vehicles together!* 🚗💨
