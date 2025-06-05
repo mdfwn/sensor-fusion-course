@@ -1,257 +1,255 @@
 # 🚗 Interactive Python-First Sensor Fusion Course
 
-Welcome to the comprehensive, hands-on sensor fusion course designed for autonomous vehicle engineers and robotics enthusiasts!
+## 🌟 What's New - Enhanced Notebook Experience!
 
-## 🌟 Course Overview
+The Jupyter notebooks have been completely redesigned with:
+- ✨ **Professional Styling**: Beautiful gradients, progress tracking, and modern UI
+- 🎯 **Interactive Elements**: Info boxes, tips, warnings, and enhanced visualizations  
+- � **Better Code Organization**: Clear sections, improved formatting, and documentation
+- 🎮 **Enhanced Interactivity**: Custom toolbar buttons and improved navigation
+- � **Responsive Design**: Works great on desktop and mobile devices
 
-This course transforms traditional sensor fusion education with:
-- **Interactive Jupyter Notebooks** — Execute Python code directly in your browser
-- **Real-World Applications** — Work with actual autonomous vehicle sensor data
-- **Progressive Learning** — Build skills incrementally across 4 specialized courses
-- **Modern Python Stack** — Use NumPy, OpenCV, Open3D, and other industry-standard libraries
+## 📚 Course Overview
 
-## 📁 Course Structure
+A comprehensive, hands-on course covering **LiDAR, Camera, Radar, and Kalman Filters** for autonomous vehicle sensor fusion. Built with **Python**, **Jupyter notebooks**, and interactive 3D visualizations.
 
-```
-sensor-fusion-course/
-├── 📚 content/           # Course documentation (Jupyter Book)
-│   ├── index.md         # Course overview
-│   ├── how_to_use.md    # Usage instructions
-│   ├── resources.md     # Reference materials
-│   └── lidar/           # Lidar course content
-├── 📓 notebooks/        # Interactive Jupyter notebooks
-│   └── lidar/           # Hands-on lidar exercises
-├── 📦 requirements.txt  # Python dependencies
-└── 🔧 generate_notebooks.py  # Notebook generator script
-```
+### 🎓 What You'll Learn
+
+**4 Complete Courses + Capstone Project** (~63 hours total)
+
+1. **� LiDAR & Point Clouds** (15 hours)
+   - Physics of time-of-flight measurements
+   - 3D point cloud processing with Open3D
+   - RANSAC plane detection
+   - Euclidean clustering for object detection
+
+2. **📷 Camera Systems** (18 hours) 
+   - Camera calibration and distortion correction
+   - Stereo vision and depth estimation
+   - Feature detection (SIFT, SURF, ORB)
+   - Object tracking and recognition
+
+3. **📡 Radar Processing** (12 hours)
+   - Doppler effect and velocity estimation
+   - CFAR detection algorithms
+   - Range-azimuth processing
+   - Multi-target tracking
+
+4. **🔄 Kalman Filters** (18 hours)
+   - Linear and Extended Kalman Filters
+   - Unscented Kalman Filters
+   - Multi-sensor data fusion
+   - State estimation and prediction
+
+5. **🚀 Capstone Project** (Individual)
+   - Full autonomous vehicle perception pipeline
+   - Real-world dataset integration
+   - Performance evaluation and optimization
 
 ## 🚀 Quick Start
 
-### 1. Set Up Your Environment
-
+### Option 1: Enhanced Launch (Recommended)
 ```bash
-# Clone or download the course
-git clone <your-repo-url>
-cd sensor-fusion-course
+# Setup enhanced styling and features
+python3 setup_notebook_styling.py
 
-# Install Python dependencies
+# Launch with custom configuration
+./launch_notebooks.sh
+```
+
+### Option 2: Standard Launch
+```bash
+# Install dependencies
 pip install -r requirements.txt
 
-# Generate any missing notebooks
-python3 generate_notebooks.py
-```
-
-### 2. Start Learning
-
-**Option A: Interactive Notebooks (Recommended)**
-```bash
-# Launch Jupyter Lab
+# Start Jupyter Lab
 jupyter lab
 
-# Navigate to: notebooks/lidar/01_introduction_to_lidar.ipynb
-# Start with the first lesson!
-```
-
-**Option B: Documentation**
-```bash
-# Build the documentation (optional)
-jupyter-book build content/
-
-# Open _build/html/index.html in your browser
-```
-
-## 📚 Course Content
-
-### 🔍 Course 1: Lidar Obstacle Detection
-**Location:** `notebooks/lidar/`
-
-- 📓 `01_introduction_to_lidar.ipynb` — Sensor principles, time-of-flight calculations
-- 📓 `02_parsing_pcd_ply_files.ipynb` — File I/O with Open3D
-- 📓 `03_ransac_plane_fitting.ipynb` — Ground plane detection
-- 📓 `04_euclidean_clustering.ipynb` — Object segmentation with KD-trees
-- 📓 `05_bounding_boxes.ipynb` — Object localization
-- 📓 `06_lidar_visualizer.ipynb` — Interactive 3D visualization
-- 📓 `07_lidar_summary.ipynb` — Complete pipeline integration
-
-### 📷 Course 2: Camera Tracking & Detection *(Coming Soon)*
-**Location:** `notebooks/camera/`
-
-- Camera calibration and distortion correction
-- Feature detection (SIFT, SURF, ORB, Harris)
-- Object detection with YOLOv8
-- Multi-object tracking algorithms
-- Time-to-collision estimation
-
-### 📡 Course 3: Radar Processing *(Coming Soon)*
-**Location:** `notebooks/radar/`
-
-- FFT-based range-doppler maps
-- CFAR (Constant False Alarm Rate) detection
-- Angle-of-arrival estimation
-- Multi-target tracking
-
-### 🧮 Course 4: Kalman Filters & Fusion *(Coming Soon)*
-**Location:** `notebooks/kalman_filters/`
-
-- Linear, Extended, and Unscented Kalman Filters
-- Multi-sensor data fusion
-- Track-to-track association
-- IMM (Interacting Multiple Model) filters
-
-### 🎓 Capstone Project *(Coming Soon)*
-**Location:** `notebooks/capstone/`
-
-- End-to-end sensor fusion pipeline
-- Real-world dataset processing
-- Performance evaluation and metrics
-
-## 🎯 Learning Path
-
-### For Beginners
-1. **Start here:** `notebooks/lidar/01_introduction_to_lidar.ipynb`
-2. **Follow the sequence** — each notebook builds on previous concepts
-3. **Complete exercises** — hands-on practice is essential
-4. **Ask questions** — use the community forum for help
-
-### For Experienced Practitioners
-1. **Review the overview:** `content/index.md`
-2. **Jump to specific topics** — each notebook is self-contained
-3. **Focus on implementation** — modify and extend the provided code
-4. **Contribute improvements** — help make the course better!
-
-## 🛠️ Prerequisites
-
-### Programming
-- **Python 3.8+** — Functions, classes, NumPy basics
-- **Jupyter Notebooks** — Basic familiarity helpful
-- **Git** — For version control and collaboration
-
-### Mathematics  
-- **Linear Algebra** — Vectors, matrices, transformations
-- **Probability** — Distributions, Bayes' theorem
-- **Basic Calculus** — Derivatives, optimization
-
-### Hardware Understanding
-- **Basic Physics** — Wave properties, kinematics
-- **Sensor Concepts** — Understanding of measurement principles
-
-## 📦 Dependencies
-
-All required packages are listed in `requirements.txt`:
-
-```txt
-# Core scientific computing
-numpy>=1.24.0
-scipy>=1.10.0
-matplotlib>=3.6.0
-
-# Computer vision and 3D processing
-open3d>=0.18.0
-opencv-python>=4.8.0
-scikit-image>=0.20.0
-plotly>=5.17.0
-
-# Kalman filtering
-filterpy>=1.4.5
-
-# Interactive notebooks
-jupyter>=1.0.0
-jupyterlab>=4.0.0
-ipywidgets>=8.0.0
-
-# Documentation (optional)
-jupyter-book>=0.15.0
-myst-parser>=2.0.0
-```
-
-## 💻 System Requirements
-
-### Minimum
-- **OS:** Windows 10, macOS 10.14, or Linux
-- **RAM:** 8GB (16GB recommended)
-- **Storage:** 2GB free space
-- **Python:** 3.8 or newer
-
-### Recommended
-- **GPU:** NVIDIA GPU with CUDA support (for deep learning sections)
-- **Display:** 1920x1080 or higher (for 3D visualizations)
-- **Internet:** For downloading datasets and documentation
-
-## 🎮 Interactive Features
-
-### Jupyter Notebooks
-- **Live Code Execution** — Run and modify all examples
-- **Interactive Visualizations** — 3D plots with Plotly
-- **Progressive Exercises** — Build skills step-by-step
-- **Immediate Feedback** — See results instantly
-
-### Visualization Tools
-- **3D Point Cloud Viewer** — Rotate, zoom, pan through data
-- **Interactive Plots** — Hover for details, zoom regions
-- **Real-time Updates** — See changes as you modify code
-- **Export Capabilities** — Save plots and results
-
-## 🚦 Getting Help
-
-### Common Issues
-
-**"ModuleNotFoundError" when running notebooks:**
-```bash
-# Make sure all dependencies are installed
-pip install -r requirements.txt
-```
-
-**Jupyter Lab won't start:**
-```bash
-# Try updating Jupyter
-pip install --upgrade jupyterlab
-
-# Or use classic Jupyter
-jupyter notebook
-```
-
-**3D visualizations not working:**
-```bash
-# Install Plotly extensions
-pip install "plotly>=5.0" "ipywidgets>=8.0"
-jupyter lab clean
-jupyter lab build
-```
-
-### Support Channels
-- **GitHub Issues** — Bug reports and feature requests
-- **Discussion Forum** — Community Q&A
-- **Documentation** — Comprehensive guides and references
-
-## 🎯 Success Metrics
-
-By the end of this course, you'll be able to:
-- ✅ Process lidar point clouds for obstacle detection
-- ✅ Implement camera-based object tracking
-- ✅ Build radar signal processing pipelines  
-- ✅ Design multi-sensor Kalman filter systems
-- ✅ Create complete autonomous vehicle perception stacks
-- ✅ Evaluate system performance with industry metrics
-
-## 🤝 Contributing
-
-We welcome contributions! See our contribution guidelines for:
-- Adding new lessons or improving existing ones
-- Fixing bugs or typos
-- Creating additional exercises
-- Improving documentation
-
-## 📄 License
-
-This course is open source under the MIT License. Feel free to use, modify, and share!
-
----
-
-**Ready to start your sensor fusion journey?** 🚀
-
-```bash
-jupyter lab
 # Open: notebooks/lidar/01_introduction_to_lidar.ipynb
 ```
 
-*Happy learning!* 🎓✨
+## 📁 Project Structure
+
+```
+sensor-fusion-course/
+├── 📓 notebooks/                    # Interactive Jupyter Notebooks
+│   ├── lidar/                       # LiDAR processing lessons
+│   ├── camera/                      # Camera vision lessons  
+│   ├── radar/                       # Radar processing lessons
+│   ├── kalman/                      # Kalman filter lessons
+│   └── capstone/                    # Final project
+├── 📖 content/                      # Reference Documentation  
+│   ├── courses/                     # Markdown course content
+│   ├── index.md                     # Course overview
+│   ├── how_to_use.md               # Usage instructions
+│   └── resources.md                # References and datasets
+├── 🎨 src/                         # Web Assets
+│   ├── css/custom.css              # Course styling
+│   └── js/course-features.js       # Interactive features
+├── ⚙️ jupyter_config/              # Jupyter Enhancements
+│   └── custom.css                  # Notebook styling
+├── 📋 requirements.txt             # Python dependencies
+├── 🛠️ setup_notebook_styling.py    # Styling setup script
+└── 🚀 launch_notebooks.sh          # Enhanced launch script
+```
+
+## � System Requirements
+
+### Required Software
+- **Python 3.8+** with pip
+- **Jupyter Lab/Notebook** 
+- **Git** for version control
+
+### Hardware Recommendations
+- **RAM**: 8GB+ (16GB recommended for large datasets)
+- **Storage**: 5GB+ free space
+- **GPU**: Optional (CUDA-compatible for accelerated processing)
+
+### Dependencies
+All automatically installed via `requirements.txt`:
+```
+numpy>=1.21.0
+scipy>=1.7.0
+matplotlib>=3.5.0
+plotly>=5.0.0
+jupyter>=1.0.0
+jupyterlab>=3.0.0
+open3d>=0.15.0
+opencv-python>=4.5.0
+filterpy>=1.4.0
+scikit-image>=0.19.0
+myst-parser>=0.18.0
+```
+
+## 🎮 Interactive Features
+
+### 📊 Enhanced Visualizations
+- **3D Point Clouds**: Interactive Plotly visualizations with rotation, zoom, and hover details
+- **Real-time Plots**: Dynamic matplotlib figures with animation support
+- **Progress Tracking**: Visual progress indicators throughout lessons
+
+### 🎯 Learning Tools  
+- **Hands-on Exercises**: Complete coding challenges with guided solutions
+- **Interactive Quizzes**: Built-in assessment tools with instant feedback
+- **Code Templates**: Pre-structured functions for implementation practice
+- **Real-world Examples**: Authentic autonomous vehicle scenarios
+
+### 📱 Modern Interface
+- **Professional Styling**: Beautiful gradients, shadows, and typography
+- **Responsive Design**: Works seamlessly on all device sizes
+- **Dark/Light Mode**: Automatic theme switching based on preferences
+- **Custom Toolbar**: Additional navigation and utility buttons
+
+## 📖 Dual Learning Paths
+
+### 🔬 Interactive Notebooks (`notebooks/`)
+**For hands-on coding and experimentation**
+- Executable Python code with real-time output
+- Interactive 3D visualizations and plots  
+- Guided exercises and coding challenges
+- Progress tracking and completion indicators
+
+### 📚 Reference Documentation (`content/`)
+**For comprehensive theory and reference**
+- Detailed mathematical explanations
+- Algorithm documentation and pseudocode
+- Extensive reference materials and citations
+- Jupyter Book format with search functionality
+
+Choose your preferred learning style or combine both approaches!
+
+## 🎯 Learning Path
+
+### 🥇 Beginner Track
+1. Start with **LiDAR Introduction** for 3D visualization basics
+2. Progress through **Camera Fundamentals** for 2D processing
+3. Advance to **Radar Basics** for signal processing concepts
+4. Master **Linear Kalman Filters** for state estimation
+
+### 🥈 Intermediate Track  
+1. **LiDAR Clustering** and **RANSAC** for advanced point cloud analysis
+2. **Stereo Vision** and **Feature Matching** for 3D reconstruction
+3. **CFAR Detection** and **Multi-target Tracking** for radar processing
+4. **Extended Kalman Filters** for nonlinear estimation
+
+### 🥉 Advanced Track
+1. **Complete Pipeline Integration** with real-world datasets
+2. **Multi-sensor Fusion** using **Unscented Kalman Filters**
+3. **Performance Optimization** and **Real-time Processing**
+4. **Capstone Project** development and evaluation
+
+## 🛠️ Development Setup
+
+For contributors and advanced users:
+
+```bash
+# Clone repository
+git clone https://github.com/your-repo/sensor-fusion-course.git
+cd sensor-fusion-course
+
+# Setup development environment
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# venv\Scripts\activate   # Windows
+
+# Install with development dependencies
+pip install -r requirements.txt
+
+# Setup enhanced styling
+python3 setup_notebook_styling.py
+
+# Generate additional notebooks (if needed)
+python3 generate_notebooks.py
+
+# Build documentation (optional)
+jupyter-book build content/
+```
+
+## 📊 Course Progress Tracking
+
+The enhanced notebooks include built-in progress tracking:
+- ✅ **Lesson Completion**: Visual indicators for finished sections
+- 📈 **Progress Bars**: Overall course completion percentage  
+- � **Achievement Badges**: Unlock badges for major milestones
+- 💾 **Auto-save**: Progress automatically saved in browser localStorage
+
+## 🎓 Certification & Assessment
+
+- **Interactive Quizzes**: Each lesson includes knowledge check questions
+- **Practical Exercises**: Hands-on coding challenges with auto-grading
+- **Capstone Project**: Comprehensive final project demonstrating mastery
+- **Performance Metrics**: Track accuracy, efficiency, and code quality
+
+## 🤝 Contributing
+
+We welcome contributions! See our [Contributing Guide](CONTRIBUTING.md) for:
+- 🐛 Bug reports and feature requests
+- 📝 Content improvements and new lessons  
+- 🎨 UI/UX enhancements
+- 🧪 Additional datasets and examples
+
+## � License
+
+This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
+
+## 🙏 Acknowledgments
+
+- **Open3D Team** for excellent 3D processing libraries
+- **OpenCV Community** for computer vision tools
+- **Plotly Developers** for interactive visualization capabilities
+- **Jupyter Project** for the outstanding notebook ecosystem
+- **Autonomous Vehicle Research Community** for datasets and inspiration
+
+---
+
+## 🚀 Ready to Start?
+
+1. **Setup**: `python3 setup_notebook_styling.py`
+2. **Launch**: `./launch_notebooks.sh` 
+3. **Learn**: Open `notebooks/lidar/01_introduction_to_lidar.ipynb`
+4. **Explore**: Try the interactive 3D visualizations!
+5. **Progress**: Complete hands-on exercises and track your advancement
+
+**Happy Learning!** 🎓✨
+
+*Transform your understanding of autonomous vehicle perception with hands-on Python programming and cutting-edge sensor fusion techniques.*
