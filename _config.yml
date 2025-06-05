@@ -1,0 +1,84 @@
+# Jupyter Book Configuration for Sensor Fusion Course
+title: "Interactive Sensor Fusion Course"
+author: "Sensor Fusion Team"
+logo: ""
+
+# Force re-execution of notebooks on each build
+execute:
+  execute_notebooks: cache
+  timeout: 120
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: sensor_fusion_course.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/yourusername/sensor-fusion-course
+  path_to_book: ""
+  branch: main
+
+# Add GitHub buttons to your book
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  baseurl: ""
+  extra_css:
+    - src/css/custom.css
+  extra_js:
+    - src/js/course-features.js
+
+# MyST extensions
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+    - tasklist
+
+# Sphinx extensions
+sphinx:
+  extra_extensions:
+    - sphinx_togglebutton
+    - sphinx_copybutton
+    - sphinx.ext.mathjax
+    - myst_parser
+  config:
+    html_theme: furo
+    html_title: "Interactive Sensor Fusion Course"
+    html_static_path:
+      - src/css
+      - src/js
+    html_css_files:
+      - css/custom.css
+    html_js_files:
+      - js/course-features.js
+    html_theme_options:
+      light_css_variables:
+        color-brand-primary: "#2962ff"
+        color-brand-content: "#2962ff"
+      dark_css_variables:
+        color-brand-primary: "#448aff"
+        color-brand-content: "#448aff"
+      sidebar_hide_name: false
+      navigation_with_keys: true
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    mathjax3_config:
+      tex:
+        inlineMath: [["\\(", "\\)"], ["$", "$"]]
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]]
+    copybutton_prompt_text: "$ "
+    copybutton_prompt_is_regexp: true

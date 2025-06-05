@@ -1,0 +1,114 @@
+# Table of Contents for Interactive Sensor Fusion Course
+format: jb-book
+root: content/index
+title: Home
+
+parts:
+- caption: Getting Started
+  chapters:
+  - file: content/how_to_use
+    title: How to Use This Course
+  - file: content/resources
+    title: Resources & References
+
+- caption: Course 1 - Lidar
+  chapters:
+  - file: content/lidar/index
+    title: Lidar Overview
+    sections:
+    - file: content/lidar/introduction
+      title: Introduction to Lidar & Point Clouds
+    - file: content/lidar/parsing_files
+      title: Parsing PCD/PLY Files
+    - file: content/lidar/ransac
+      title: RANSAC Plane Fitting
+    - file: content/lidar/clustering
+      title: Euclidean Clustering with KD-Tree
+    - file: content/lidar/bounding_boxes
+      title: Bounding Box Generation
+    - file: content/lidar/visualizer
+      title: Interactive Lidar Visualizer
+    - file: content/lidar/summary
+      title: Lesson Summary & Quiz
+
+- caption: Course 2 - Camera
+  chapters:
+  - file: content/camera/index
+    title: Camera Overview
+    sections:
+    - file: content/camera/camera_models
+      title: Camera Models & Calibration
+    - file: content/camera/gradients
+      title: Image Gradients & Filtering
+    - file: content/camera/features
+      title: Feature Detectors (Harris, SIFT/SURF/ORB)
+    - file: content/camera/matching
+      title: Descriptor Matching & Outlier Rejection
+    - file: content/camera/yolo
+      title: Object Detection with YOLOv8
+    - file: content/camera/tracking
+      title: Multi-Object Tracking (SORT/Deep SORT)
+    - file: content/camera/collision
+      title: Collision Time-to-Contact Estimation
+    - file: content/camera/summary
+      title: Lesson Summary & Quiz
+
+- caption: Course 3 - Radar
+  chapters:
+  - file: content/radar/index
+    title: Radar Overview
+    sections:
+    - file: content/radar/principles
+      title: Radar Principles & Range Equation
+    - file: content/radar/fft
+      title: FFT-based Range-Doppler Maps
+    - file: content/radar/cfar
+      title: CFAR Thresholding
+    - file: content/radar/angle_estimation
+      title: Angle-of-Arrival Estimation
+    - file: content/radar/data_association
+      title: Data Association & Gating
+    - file: content/radar/multi_target
+      title: Tracking Multiple Targets
+    - file: content/radar/summary
+      title: Lesson Summary & Quiz
+
+- caption: Course 4 - Kalman Filters
+  chapters:
+  - file: content/kalman_filters/index
+    title: Kalman Filters Overview
+    sections:
+    - file: content/kalman_filters/linear_kf
+      title: Linear Kalman Filter Mathematics
+    - file: content/kalman_filters/extended_unscented
+      title: Extended & Unscented Kalman Filters
+    - file: content/kalman_filters/noise_tuning
+      title: Process & Measurement Noise Tuning
+    - file: content/kalman_filters/transforms
+      title: Coordinate Frame Transforms
+    - file: content/kalman_filters/track_fusion
+      title: Track-to-Track Fusion Strategies
+    - file: content/kalman_filters/imm
+      title: IMM (Interacting Multiple Model) Tracking
+    - file: content/kalman_filters/misalignment
+      title: Sensor Mis-alignment Compensation
+    - file: content/kalman_filters/summary
+      title: Lesson Summary & Quiz
+
+- caption: Capstone Project
+  chapters:
+  - file: content/capstone/index
+    title: Capstone Overview
+    sections:
+    - file: content/capstone/brief
+      title: Project Brief & Rubric
+    - file: content/capstone/dataset
+      title: Dataset Download & Setup
+    - file: content/capstone/baseline
+      title: Baseline Pipeline Notebook
+    - file: content/capstone/milestones
+      title: Project Milestones
+    - file: content/capstone/evaluation
+      title: Evaluation & Metrics
+    - file: content/capstone/submission
+      title: Submission Guidelines

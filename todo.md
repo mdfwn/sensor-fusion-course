@@ -11,27 +11,27 @@ Maintain this ToDo yourself - work from top to bottom. Check off tasks as you co
 ---
 
 ## 0 · Project Bootstrap
-- [] **Initialize repo & tooling**
+- [x] **Initialize repo & tooling**
   - Create a Git repo with 2 main folders: `/src` (HTML/CSS/JS) and `/content` (Markdown → HTML).  
   - Use **MyST-Markdown** or **Jupyter Book** for easy math (`$$…$$`) rendering and code execution blocks.  
   - Add `requirements.txt` with: `numpy`, `scipy`, `matplotlib`, `open3d`, `opencv-python`, `filterpy`, `scikit-image`, `plotly`, `jupyter-book`, `myst-parser`, `sphinx-togglebutton`, `sphinx-copybutton`.  
   - Configure **Sphinx** theme = `furo` (or another modern responsive theme) with dark-mode toggle.
 
-- [] **Global HTML layout**
+- [x] **Global HTML layout**
   - Create a base template (`base.html`) containing:  
     - Mobile-first navbar (hamburger on small screens) linking to all courses & capstone.  
     - Sidebar with progress tracker (JS localStorage).  
-    - Built-in code renderer (highlight.js) + “copy ⇩” button.  
+    - Built-in code renderer (highlight.js) + "copy ⇩" button.  
     - MathJax config for LaTeX.  
   - Add CSS (`tailwind.css` or vanilla) for a clean, airy design (max-width 920 px, ample line-height).
 
 ---
 
 ## 1 · Front-Matter Pages
-- [] **`index.md`** — program overview  
+- [x] **`index.md`** — program overview  
   - Brief description, learning goals, estimated hours, prerequisites (Python, linear algebra, probability, calculus, Linux).  
-- [] **`how_to_use.md`** — instructions on interactive notebooks, code sandboxing, quizzes, and progress tracking.  
-- [] **`resources.md`** — links to official docs for NumPy, OpenCV, Open3D, etc.
+- [x] **`how_to_use.md`** — instructions on interactive notebooks, code sandboxing, quizzes, and progress tracking.  
+- [x] **`resources.md`** — links to official docs for NumPy, OpenCV, Open3D, etc.
 
 ---
 
@@ -44,10 +44,10 @@ Create folder `/content/lidar/`.
 > - Provide runnable Python example(s).  
 > - End with 3–5 quiz Q&A + 1 mini-exercise notebook.
 
-1. [] **Introduction to Lidar & Point Clouds**  
-2. [] **Parsing PCD/PLY Files** (Open3D)  
-3. [] **RANSAC Plane Fitting** (line & plane equations)  
-4. [] **Euclidean Clustering with KD-Tree**  
+1. [x] **Introduction to Lidar & Point Clouds**  
+2. [x] **Parsing PCD/PLY Files** (Open3D)  
+3. [x] **RANSAC Plane Fitting** (line & plane equations)  
+4. [x] **Euclidean Clustering with KD-Tree**  
 5. [] **Bounding-Box Generation** (AABB vs OBB)  
 6. [] **Interactive Lidar Visualizer** (Plotly 3-D)  
 7. [] **Lesson Summary + Quiz**
